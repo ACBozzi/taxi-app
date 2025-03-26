@@ -2,10 +2,13 @@
 
 namespace test;
 
-use App\Models\Account;
-use App\Repositories\AccountRepository;
+use AnnaBozzi\TaxiApp\Controllers\AccountController;
+use AnnaBozzi\TaxiApp\repositories\AccountRepository;
 use PHPUnit\Framework\TestCase;
-use controllers\AccountController;
+use Slim\Psr7\Factory\RequestFactory;
+use Slim\Psr7\Factory\ResponseFactory;
+use Slim\Psr7\Stream;
+
 class AccountTest extends TestCase {
 
 	public function createPassangerAccount() {
@@ -41,6 +44,9 @@ class AccountTest extends TestCase {
 		$this->assertTrue($responseBody['is_passenger']);
 
 		//then
+	}
+
+	private function createPassengerAccountMock(string $class) {
 	}
 
 }

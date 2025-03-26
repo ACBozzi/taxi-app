@@ -1,12 +1,12 @@
 <?php
 
 use Slim\Factory\AppFactory;
-use App\Controllers\AccountController;
+use AnnaBozzi\TaxiApp\controllers\AccountController;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $pdo = require __DIR__ . '/../config/database.php';
-$accountRepository = new \App\Repositories\AccountRepository($pdo);
+$accountRepository = new \AnnaBozzi\TaxiApp\repositories\AccountRepository($pdo);
 $accountController = new AccountController($accountRepository);
 
 $app = AppFactory::create();

@@ -20,3 +20,7 @@ COPY . .
 
 # Expor a porta do PHP
 EXPOSE 9000
+
+# Adicione o PHPUnit no Dockerfile
+RUN curl -sS https://getcomposer.org/installer | php \
+    && php composer.phar require --dev phpunit/phpunit

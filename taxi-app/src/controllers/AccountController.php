@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Controllers;
+namespace AnnaBozzi\TaxiApp\Controllers;
 
-use App\Repositories\AccountRepository;
+use AnnaBozzi\TaxiApp\repositories\AccountRepository;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 

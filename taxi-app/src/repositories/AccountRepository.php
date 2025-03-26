@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace AnnaBozzi\TaxiApp\Repositories;
 
 use App\Models\Account;
 use PDO;
