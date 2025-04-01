@@ -99,3 +99,31 @@ long numeric,
 date timestamp
 );
 
+**Consumir signUp**
+
+Exemplo com Postman:
+URL: http://localhost:8080/signup
+
+Método: POST
+
+Cabeçalhos:
+
+Content-Type: application/json
+
+Corpo da requisição (dados do usuário):
+
+```json
+{
+"name": "Lucas Almeida",
+"email": "lucas.silva89@email.com",
+"cpf": "473.285.610-39",
+"is_passenger": true,
+"password": "123456"
+}
+```
+
+```json
+curl -X POST http://localhost:8080/signup \
+-H "Content-Type: application/json" \
+-d '{"name": "Lucas Almeida", "email": "lucas.silva89@email.com", "cpf": "473.285.610-39", "is_passenger": true, "password": "123456"}'
+```
