@@ -12,5 +12,6 @@ $accountController = new AccountController($accountRepository);
 $app = AppFactory::create();
 
 $app->post('/signup', [$accountController, 'signup']);
+$app->get('/account/{id}', [$accountController, 'getAccount']);
 
 $app->run();
