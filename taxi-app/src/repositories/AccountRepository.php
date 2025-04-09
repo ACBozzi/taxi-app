@@ -51,4 +51,12 @@ class AccountRepository {
 
 		return $data ? new Account($data) : null;
 	}
+
+	public function getById(string $accountId) {
+		$stmt = $this->pdo->prepare("SELECT * FROM cccat14.account WHERE account_id = :account_id");
+		$stmt->execute(['account_id' => $accountId]);
+		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+
+		return $data ? new Account($data) : null;
+	}
 }

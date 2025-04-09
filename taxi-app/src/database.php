@@ -6,7 +6,7 @@ use PDO;
 use PDOException;
 use Dotenv\Dotenv;
 
-class Database {
+class database {
 	private PDO $connection;
 
 	public function __construct() {

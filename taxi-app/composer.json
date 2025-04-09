@@ -20,5 +20,8 @@
         "slim/pdo": "^2.2",
         "phpunit/phpunit": "^9.5",
       "ext-pdo": "*"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.9"
     }
 }

@@ -42,6 +42,19 @@ services:
     networks:
       - taxi-app-network
 
+  taxi-app-tests:
+    build: .
+    container_name: taxi-app-tests
+    depends_on:
+      - taxi-app-nginx
+    networks:
+      - taxi-app-network
+    volumes:
+      - .:/var/www/html
+    working_dir: /var/www/html
+    entrypoint: [ "php", "./vendor/bin/phpunit" ]
+
+
 networks:
   taxi-app-network:
 
